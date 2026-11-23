@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duelo Ronin 1vs1</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Duelo Ronin <span>1 vs 1</span></h1>
+      <div class="hud">
+        <span id="role">Conectando…</span>
+        <span id="ping">— ms</span>
+      </div>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="800" height="450" aria-label="Arena de pelea"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title"></p>
+        <p id="overlay-sub"></p>
+        <button id="btn-ready" type="button" hidden>Listo</button>
+        <button id="btn-rematch" type="button" hidden>Revancha</button>
+        <button id="btn-reload" type="button" hidden>Volver a entrar</button>
+      </div>
+    </div>
+
+    <section class="help" aria-label="Controles">
+      <p>
+        <kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd> moverse &nbsp;·&nbsp;
+        <kbd>Shift</kbd> correr &nbsp;·&nbsp;
+        <kbd>W</kbd> / <kbd>↑</kbd> / <kbd>Espacio</kbd> brincar &nbsp;·&nbsp;
+        <kbd>S</kbd> / <kbd>↓</kbd> bloquear
+      </p>
+      <p>
+        <kbd>J</kbd> puñetazo &nbsp;·&nbsp; <kbd>K</kbd> patada &nbsp;·&nbsp;
+        <kbd>Enter</kbd> listo / revancha &nbsp;·&nbsp; <kbd>H</kbd> ver hitboxes &nbsp;·&nbsp; <kbd>M</kbd> sonido
+      </p>
+      <p class="muted">Solo pueden entrar 2 jugadores. Gana quien se lleve 2 rondas (K.O. o más vida al acabar el tiempo).</p>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="sprite-config.js"></script>
+  <script src="sprites.js"></script>
+  <script src="fighter.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

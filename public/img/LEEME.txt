@@ -1,0 +1,8 @@
+Pon aquí la imagen del jugador como:  jugador.png
+
+- Sprite sheet con fondo transparente, personaje mirando a la derecha.
+- Por defecto se espera una cuadrícula de 5 columnas x 4 filas
+  (fila 0 parado, 1 caminar, 2 correr, 3 brincar), igual que sprite-colisiones.
+- Si tu imagen es distinta, ajusta public/sprite-config.js.
+
+Si no hay imagen, el juego usa el personaje "Ronin" dibujado por código.
