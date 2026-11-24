@@ -76,3 +76,9 @@ Para jugar en red local, el otro jugador abre `http://<IP-de-tu-PC>:3000`.
 - El servidor decide todo (posiciones, golpes, vida); el cliente solo manda qué teclas tiene presionadas.
   Así nadie puede hacer trampa modificando su navegador.
 - El `playerId` en `sessionStorage` sirve para reconectar, no es seguridad real.
+
+## Publicar en Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/luisito2806/1vs1)
+
+El archivo `render.yaml` crea un servicio web gratuito (`npm install` y `npm start`). Render asigna el puerto con la variable `PORT` y soporta WebSocket, así que Socket.IO funciona sin configurar nada más. Para jugar, abre la dirección en dos dispositivos o navegadores distintos. El plan gratuito se duerme tras 15 minutos sin visitas: la primera visita después tarda alrededor de un minuto en cargar.
